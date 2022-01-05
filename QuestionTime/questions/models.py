@@ -4,7 +4,7 @@ from django.db import models
 from core.models import TimeStampedModel
 
 class Question(TimeStampedModel):
-    content = models.CharField(max_fields=240)
+    content = models.CharField(max_length=240)
     slug = models.SlugField(max_length=255, unique=True)
     author = models.ForeignKey(
         settings.AUTH_USER_MODEL,
